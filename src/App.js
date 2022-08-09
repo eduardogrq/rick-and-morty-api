@@ -30,7 +30,7 @@ const App = () => {
       <div className="container">
         <Routes>
           <Route path='/' element={<AllCharacters characters={characters} />} />
-          <Route path='/:id' element={<Character />}/>
+          <Route path='/:id' element={<Character characters={characters} />}/>
           {/* 404 Error */}
           <Route path='/*' element={<div>404 No se encuentra</div>}/>
         </Routes>
