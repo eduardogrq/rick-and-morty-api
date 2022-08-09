@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import {Routes, Route, Link} from 'react-router-dom';
 import AllCharacters from './components/AllCharacters'
+import Character from './components/Character'
+import Header from './components/Header'
+import './App.css'
 
 const App = () => {
 
@@ -20,11 +23,14 @@ const App = () => {
 
 
   return(
-    <div className="bg-dark">
+    <div className="body">
+      <div>
+        <Header />
+      </div>
       <div className="container">
         <Routes>
           <Route path='/' element={<AllCharacters characters={characters} />} />
-          <Route path='/:id' element={<div>Hola mundo desde id</div>}/>
+          <Route path='/:id' element={<Character />}/>
           {/* 404 Error */}
           <Route path='/*' element={<div>404 No se encuentra</div>}/>
         </Routes>
