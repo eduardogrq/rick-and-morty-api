@@ -25,7 +25,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<AllCharacters characters={characters} />} />
           <Route path='/:id' element={<div>Hola mundo desde id</div>}/>
-          {/* Error 404 */}
+          {/* 404 Error */}
           <Route path='/*' element={<div>404 No se encuentra</div>}/>
         </Routes>
       </div>
