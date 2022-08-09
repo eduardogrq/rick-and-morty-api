@@ -20,7 +20,7 @@ const App = () => {
 
 
   return(
-    <div>
+    <div className="bg-dark">
       <div className="container">
         <Routes>
           <Route path='/' element={<AllCharacters characters={characters} />} />
