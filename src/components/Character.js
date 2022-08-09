@@ -5,11 +5,12 @@ const Character = () => {
     const params = useParams();
     const url = 'https://rickandmortyapi.com/api/character'
 
-    const [character, setCharacter] = useState();
+    const [character, setCharacter] = useState([]);
 
     const getCharacter = async (url) => {
         const res = await fetch(`${url}/${params.id}`)
         const data = await res.json();
+        // console.log(data)
 
         setCharacter(data)
 
@@ -30,7 +31,7 @@ const Character = () => {
                     </div>
                     <div className="col-md-8">
                     <div className="card-body">
-                        <h5 className="card-title">Card title</h5>
+                        <h5 className="card-title">{character.name}</h5>
                         <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
                     </div>
